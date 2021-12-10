@@ -1,0 +1,72 @@
+.home{
+    background: url(../components/home/hero/2.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+ 
+  .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    background:#fff;
+    font-weight: 500;
+    color:var(--black);
+    cursor: pointer;
+  }
+  
+  .btn:hover{
+    background: var(--main-color);
+    color:#fff;
+    letter-spacing: .1rem;
+  } 
+  
+  .home .content{
+    padding-top: 25rem;
+    max-width:70rem;
+    margin:0 auto;
+  }
+  
+  .home .content h3{
+    font-size: 7rem;
+    color:#fff;
+
+  }
+  
+  .home .content p{
+    font-size: 2rem;
+    color:rgb(255, 255, 255);
+    padding-top:15rem ;
+    font-weight: 500;
+  }
+  
+
+  .heading{
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color:#fff;
+  }
+  
+  .heading span{
+    color:var(--main-color);
+  }
+  
+  .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    background:#fff;
+    font-weight: 500;
+    color:var(--black);
+    cursor: pointer;
+  }
+  
+  .btn:hover{
+    background: var(--main-color);
+    color:#fff;
+    letter-spacing: .1rem;
+  }

@@ -1,16 +1,71 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root{
+  --main-color:#ef7819;
+  --black:#141215;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
   box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  transition: width none;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--main-color);
+}
+
+body{
+  overflow-x: hidden;
+  background: var(--black);
+}
+
+section{
+  padding:2rem 9%;
+}
+
+.heading{
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  color:#fff;
+}
+
+.heading span{
+  color:var(--main-color);
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding:.8rem 3rem;
+  font-size: 1.7rem;
+  background:#fff;
+  font-weight: 500;
+  color:var(--black);
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--main-color);
+  color:#fff;
+  letter-spacing: .1rem;
 }
