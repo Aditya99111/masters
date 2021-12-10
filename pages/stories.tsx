@@ -4,8 +4,10 @@ import Blog from "../components/blogs/Blog";
 const stories = () => {
   return (
     <div>
+      <>
       <Header />
       <Blog />
+      </>
     </div>
   );
 };
