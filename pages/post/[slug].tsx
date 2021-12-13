@@ -26,7 +26,6 @@ const Post: React.FC<{ post: Post }> = (props) => {
     return <p>Loading</p>;
   }
 
-  console.log(post.html);
   return (
     <div>
       <Link href="/">

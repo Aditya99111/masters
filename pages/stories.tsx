@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/home/header/Header";
 import Blog from "../components/blogs/Blog";
 const stories = (props) => {
-  console.log(props);
   return (
     <div>
       <>
