@@ -16,29 +16,20 @@ const stories = (props) => {
 const BLOG_URL = "https://demo.ghost.io";
 const CONTENT_API_KEY = "22444f78447824223cefc48062";
 
-type post = {};
 async function getPosts() {
   // curl "https://demo.ghost.io/ghost/api/v3/content/posts/?key=22444f78447824223cefc48062"
   const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}`
+    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,id`
   ).then((res) => res.json());
 
-  const titles = res.posts.map((post) => post.title);
-
-  return titles;
+  return res.posts;
 }
 
 export const getStaticProps = async ({ params }) => {
-  const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}`
-  ).then((res) => res.json());
-
-  const titles = res.posts.map((post) => post.title);
-  console.log(titles);
-
   const posts = await getPosts();
   return {
     props: { posts },
+    revalidate: 10,
   };
 };
 

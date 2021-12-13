@@ -1,10 +1,16 @@
 import React from "react";
 import blogstyles from "../../styles/Blogspage.module.css";
+import Link from "next/link";
 
-const Blog: React.FC<{ posts: string[] }> = (props) => {
+type post = {
+  title: string;
+  slug: string;
+  id: string;
+};
+
+const Blog: React.FC<{ posts: post[] }> = (props) => {
   const { posts } = props;
 
-  console.log(posts);
   return (
     <div>
       <section className={blogstyles.blogspage} id="blogs">
@@ -17,28 +23,23 @@ const Blog: React.FC<{ posts: string[] }> = (props) => {
           <h1>hello</h1>
           <ul>
             <li>hi</li>
-            {posts.map((post, index) => {
+            {posts.map((post) => {
               return (
-                <div
-                  key={index}
-                  className={blogstyles.box}
-                  data-aos="fade-right"
-                >
-                  <div className={blogstyles.image}>
-                    <img src="image/1.jpeg" alt="" />
+                <Link key={post.id} href="/post/slug" as={`/post/${post.slug}`}>
+                  <div className={blogstyles.box} data-aos="fade-right">
+                    <div className={blogstyles.image}>
+                      <img src="image/1.jpeg" alt="" />
+                    </div>
+                    <div className={blogstyles.content}>
+                      <h3>{post.title}</h3>
+                      {/* {post.html} */}
+                      <a href="#" className={blogstyles.btn}>
+                        read more
+                      </a>
+                      <div className={blogstyles.icons}></div>
+                    </div>
                   </div>
-                  <div className={blogstyles.content}>
-                    <h3>Lorem ipsum dolor sit amet..</h3>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Earum, harum!
-                    </p>
-                    <a href="#" className={blogstyles.btn}>
-                      read more
-                    </a>
-                    <div className={blogstyles.icons}></div>
-                  </div>
-                </div>
+                </Link>
               );
             })}
           </ul>
