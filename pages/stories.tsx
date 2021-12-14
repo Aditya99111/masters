@@ -8,7 +8,7 @@ const stories = (props) => {
       <>
         <Header />
         <Blog posts={props.posts} />
-        <Footer/>
+        <Footer />
       </>
     </div>
   );
@@ -20,7 +20,7 @@ const CONTENT_API_KEY = "22444f78447824223cefc48062";
 async function getPosts() {
   // curl "https://demo.ghost.io/ghost/api/v3/content/posts/?key=22444f78447824223cefc48062"
   const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,id`
+    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,id,feature_image, html`
   ).then((res) => res.json());
 
   return res.posts;

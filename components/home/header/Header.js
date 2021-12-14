@@ -1,27 +1,31 @@
-import React from 'react'
-import headerstyles from "../../../styles/Header.module.css"
-import Link from 'next/link'
+import React from "react";
+import headerstyles from "../../../styles/Header.module.css";
+import Link from "next/link";
+
 const Header = () => {
-    return (
+  return (
+    <header className={headerstyles.header}>
+      <Link href="/">
+        <a className={headerstyles.logo}>Guild Masters Den </a>
+      </Link>
 
-            <header className={headerstyles.header}>
+      <nav className={headerstyles.navbar}>
+        <a href="#home" className={headerstyles.active}>
+          home
+        </a>
+        <a href="#services">services</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+        <a href="#blogs">blogs</a>
+      </nav>
 
-                <a className={headerstyles.logo}> <Link href="/">Guild Masters Den</Link>  </a>
+      <div className={headerstyles.icons}>
+        <Link href="/support">
+          <button className={headerstyles.btn}>Support us!</button>
+        </Link>
+      </div>
+    </header>
+  );
+};
 
-                <nav className={headerstyles.navbar}>
-                    <a href="#home" className={headerstyles.active}>home</a>
-                    <a href="#services">services</a>
-                    <a href="#about">about</a>
-                    <a href="#contact">contact</a>
-                    <a href="#blogs">blogs</a>
-                </nav>
-
-                <div className={headerstyles.icons}>
-                    <Link href="/support"><button className={headerstyles.btn}>Support us!</button></Link>
-                </div>
-
-            </header>
-    )
-}
-
-export default Header
+export default Header;
