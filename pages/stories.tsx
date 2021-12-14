@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/home/header/Header";
+import Footer from "../components/home/footer/Footer";
 import Blog from "../components/blogs/Blog";
 const stories = (props) => {
   return (
@@ -7,6 +8,7 @@ const stories = (props) => {
       <>
         <Header />
         <Blog posts={props.posts} />
+        <Footer/>
       </>
     </div>
   );

@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:1.5rem;
+    cursor: pointer;
 }
 
 .blogspage .box_container .box .image{
@@ -32,6 +33,8 @@
     font-size: 2.5rem;
     color:var(--main-color);
     line-height: 1.8;
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .blogspage .box_container .box .content p{
@@ -39,7 +42,35 @@
     color:#fff;
     line-height: 2;
 }
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #fff;
 
+}
+.heading span{
+    color: var(--main-color);
+    
+}
+  
+  .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    background: #fff;
+    font-weight: 500;
+    color: var(--black);
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--main-color);
+    color: #fff;
+    letter-spacing: 0.1rem;
+  }
+  
 .blogspage .box_container .box .content .icons{
     margin-top: 2rem;
     padding-top: 2rem;

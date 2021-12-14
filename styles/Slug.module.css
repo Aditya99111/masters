@@ -1,0 +1,93 @@
+.blogbody{
+    padding: 4rem 8%;
+    color: white;
+    max-width: 100%;
+    
+}
+.loadingpage{
+    font-size: 5rem;
+    color: white;
+
+}
+
+.loadingcontainer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.disqus-footer{
+    display: none !important;
+}
+.load{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+
+}
+.blogbody h2{
+    font-size: 3rem;
+    padding: 3rem;
+}
+
+.blogbody figcaption{
+    padding: 1.5rem;
+}
+.blogbody p{
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    line-height: 2.5rem;
+}
+
+.blogbody b{
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+    line-height: 2.5rem;
+}
+.blogbody img{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3rem;
+}
+
+.blogbody a{
+    color: var(--main-color);
+}
+
+.blogbody li{
+font-size: 1.7rem;
+line-height: 1.8;
+
+}
+.heading {
+    padding-top: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #fff;
+    color: var(--main-color);
+}
+  
+  .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    background: #fff;
+    font-weight: 500;
+    color: var(--black);
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--main-color);
+    color: #fff;
+    letter-spacing: 0.1rem;
+  }
+  
+.back{
+    color: white;
+    font-size: 5rem;
+    padding-left: 4rem;
+    margin-top: 5rem;
+}

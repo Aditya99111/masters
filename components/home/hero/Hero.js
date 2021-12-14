@@ -9,7 +9,7 @@ const Hero = () => {
                 <div className={herostyles.content}>
                     <h3>Gather round </h3>
                     <p>Come; sit by the fire and listen to a tale I&apos;ve spun for you, traveler.</p>
-                    <Link href="/stories" className={herostyles.btn}>get started</Link>
+                   <a className={herostyles.btn}> <Link href="/stories">get started</Link></a>
                 </div>
 
 

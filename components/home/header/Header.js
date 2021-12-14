@@ -6,7 +6,7 @@ const Header = () => {
 
             <header className={headerstyles.header}>
 
-                <a href="/stories" className={headerstyles.logo}> <i className="fas fa-dice-d20"></i> Guild Masters Den </a>
+                <a className={headerstyles.logo}> <Link href="/">Guild Masters Den</Link>  </a>
 
                 <nav className={headerstyles.navbar}>
                     <a href="#home" className={headerstyles.active}>home</a>

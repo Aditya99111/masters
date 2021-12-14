@@ -1,6 +1,12 @@
 .more{
     margin-top:4rem;
 }
+
+.loadmorecontainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
 .blogs .box_container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

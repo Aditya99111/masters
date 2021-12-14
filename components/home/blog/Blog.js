@@ -1,6 +1,7 @@
 import React from 'react'
 import blogstyle from "../../../styles/Blog.module.css"
 import Link from 'next/link'
+
 const Blog = () => {
     return (
 
@@ -17,7 +18,7 @@ const Blog = () => {
                     <div className={blogstyle.content}>
                         <h3>Lorem ipsum dolor sit amet..</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, harum!</p>
-                        <Link href="#" className={blogstyle.btn}>read more</Link>
+                        <a className={blogstyle.btn}><Link href="#" >  read more</Link></a>
                         <div className={blogstyle.icons}>
                             {/* <a href="#"> <i className={blogstyle.fas}fa-calendar"></i> 1st may, 2021 </a> */}
                             {/* <a href="#"> <i className={blogstyle.fas}fa-user"></i> by admin </a> */}
@@ -31,7 +32,7 @@ const Blog = () => {
                     <div className={blogstyle.content}>
                         <h3>Lorem ipsum dolor sit amet..</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, harum!</p>
-                        <Link href="#" className={blogstyle.btn}>read more</Link>
+                        <a className={blogstyle.btn}><Link href="#" >  read more</Link></a>
                         <div className={blogstyle.icons}>
                             {/* <a href="#"> <i className={blogstyle.fas}fa-calendar"></i> 1st may, 2021 </a> */}
                             {/* <a href="#"> <i className={blogstyle.fas}fa-user"></i> by admin </a> */}
@@ -45,7 +46,7 @@ const Blog = () => {
                     <div className={blogstyle.content}>
                         <h3>Lorem ipsum dolor sit amet..</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, harum!</p>
-                        <Link href="#" className={blogstyle.btn}>read more</Link>
+                        <a className={blogstyle.btn}><Link href="#" >  read more</Link></a>
                         <div className={blogstyle.icons}>
                             {/* <a href="#"> <i className={blogstyle.fas}fa-calendar"></i> 1st may, 2021 </a> */}
                             {/* <a href="#"> <i className={blogstyle.fas}fa-user"></i> by admin </a> */}
@@ -55,8 +56,9 @@ const Blog = () => {
 
                
             </div>
-            <Link href="/stories" className={blogstyle.btn}>view more</Link>
-
+            <div className={blogstyle.loadmorecontainer}>
+                        <a className={blogstyle.btn}><Link href="/stories" >  View More</Link></a>
+</div>
         </section>
 
     )

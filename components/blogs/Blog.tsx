@@ -6,6 +6,7 @@ type post = {
   title: string;
   slug: string;
   id: string;
+  feature_image: string;
 };
 
 const Blog: React.FC<{ posts: post[] }> = (props) => {
@@ -14,25 +15,20 @@ const Blog: React.FC<{ posts: post[] }> = (props) => {
   return (
     <div>
       <section className={blogstyles.blogspage} id="blogs">
-        <h1 className={blogstyles.heading}>
-          {" "}
-          all <span>Stories</span>{" "}
-        </h1>
 
+          <h1 className={blogstyles.heading}>all<span> Stories</span></h1>
         <div className={blogstyles.box_container}>
-          <h1>hello</h1>
-          <ul>
-            <li>hi</li>
             {posts.map((post) => {
               return (
                 <Link key={post.id} href="/post/slug" as={`/post/${post.slug}`}>
                   <div className={blogstyles.box} data-aos="fade-right">
                     <div className={blogstyles.image}>
-                      <img src="image/1.jpeg" alt="" />
+                      <img src={post.feature_image} alt="" />
                     </div>
                     <div className={blogstyles.content}>
-                      <h3>{post.title}</h3>
+                      <h3>{post.title}...</h3>
                       {/* {post.html} */}
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, id!</p>
                       <a href="#" className={blogstyles.btn}>
                         read more
                       </a>
@@ -42,7 +38,6 @@ const Blog: React.FC<{ posts: post[] }> = (props) => {
                 </Link>
               );
             })}
-          </ul>
         </div>
       </section>
     </div>
