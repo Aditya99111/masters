@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import slugstyles from "../../styles/Slug.module.css";
+import Header from "../../components/home/header/Header";
+import Footer from "../../components/home/footer/Footer";
 
 const BLOG_URL = "https://demo.ghost.io";
 const CONTENT_API_KEY = "22444f78447824223cefc48062";
@@ -23,17 +26,23 @@ const Post: React.FC<{ post: Post }> = (props) => {
   const { post } = props;
   const router = useRouter();
   if (router.isFallback) {
-    return <p>Loading</p>;
+    return (
+      <p className={slugstyles.loadingpage}>
+        Laoding... <br />
+        please wait
+      </p>
+    );
   }
 
   return (
-    <div>
-      <Link href="/">
-        <a>Go back</a>
-      </Link>
-      <h1>My Blog Post</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-    </div>
+    <>
+      <Header />
+      <div className={slugstyles.blogbody}>
+        <h1 className={slugstyles.heading}>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
@@ -41,7 +50,7 @@ export const getStaticProps = async ({ params }) => {
   const post = await getPost(params.slug);
   return {
     props: { post },
-    revalidate: 10
+    revalidate: 10,
   };
 };
 
