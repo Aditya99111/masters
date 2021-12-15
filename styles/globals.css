@@ -1,71 +1,74 @@
-:root{
-  --main-color:#ef7819;
-  --black:#141215;
+:root {
+  --main-color: #ef7819;
+  --black: #141215;
 }
 
-*{
-  font-family: 'Poppins', sans-serif;
-  margin:0; padding:0;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  outline: none; border:none;
+  outline: none;
+  border: none;
   text-decoration: none;
   text-transform: capitalize;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   transition: width none;
+  max-width: 100%;
 }
 
-html{
+html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   width: 1rem;
 }
 
-html::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track {
   background: var(--black);
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   background: var(--main-color);
 }
 
-body{
+body {
   overflow-x: hidden;
   background: var(--black);
 }
 
-section{
-  padding:2rem 9%;
+section {
+  padding: 2rem 9%;
 }
 
-.heading{
+.heading {
   font-size: 4rem;
   text-align: center;
   padding-bottom: 2rem;
-  color:#fff;
+  color: #fff;
 }
 
-.heading span{
-  color:var(--main-color);
+.heading span {
+  color: var(--main-color);
 }
 
-.btn{
+.btn {
   margin-top: 1rem;
   display: inline-block;
-  padding:.8rem 3rem;
+  padding: 0.8rem 3rem;
   font-size: 1.7rem;
-  background:#fff;
+  background: #fff;
   font-weight: 500;
-  color:var(--black);
+  color: var(--black);
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--main-color);
-  color:#fff;
-  letter-spacing: .1rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
 }

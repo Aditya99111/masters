@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import commentBox from "commentbox.io";
+import { useEffect } from "react";
 
 const BLOG_URL = "https://demo.ghost.io";
 const CONTENT_API_KEY = "22444f78447824223cefc48062";
@@ -22,6 +24,13 @@ type Post = {
 const Post: React.FC<{ post: Post }> = (props) => {
   const { post } = props;
   const router = useRouter();
+  useEffect(() => {
+    const removeCommentBox = commentBox("5674909359407104-proj");
+    return () => {
+      removeCommentBox();
+    };
+  }, [router.isFallback]);
+
   if (router.isFallback) {
     return <p>Loading</p>;
   }
@@ -32,7 +41,8 @@ const Post: React.FC<{ post: Post }> = (props) => {
         <a>Go back</a>
       </Link>
       <h1>My Blog Post</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div className="commentbox" />
     </div>
   );
 };
@@ -41,7 +51,7 @@ export const getStaticProps = async ({ params }) => {
   const post = await getPost(params.slug);
   return {
     props: { post },
-    revalidate: 10
+    revalidate: 10,
   };
 };
 
