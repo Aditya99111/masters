@@ -115,3 +115,12 @@
     padding:2rem 9%;
     background: #222;
 }
+
+
+
+
+@media screen and (max-width: 730px) {
+    
+.header .navbar a{
+    display: none;}
+  }

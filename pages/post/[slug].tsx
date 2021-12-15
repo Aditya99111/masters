@@ -2,6 +2,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import commentBox from "commentbox.io";
 import { useEffect } from "react";
+import slugstyles from "../../styles/Slug.module.css";
+import Header from "../../components/home/header/Header";
+import Footer from "../../components/home/footer/Footer";
 
 const BLOG_URL = "https://demo.ghost.io";
 const CONTENT_API_KEY = "22444f78447824223cefc48062";
@@ -32,18 +35,24 @@ const Post: React.FC<{ post: Post }> = (props) => {
   }, [router.isFallback]);
 
   if (router.isFallback) {
-    return <p>Loading</p>;
+    return (
+      <p className={slugstyles.loadingpage}>
+        Laoding... <br />
+        please wait
+      </p>
+    );
   }
 
   return (
-    <div>
-      <Link href="/">
-        <a>Go back</a>
-      </Link>
-      <h1>My Blog Post</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <div className="commentbox" />
-    </div>
+    <>
+      <Header />
+      <div className={slugstyles.blogbody}>
+        <h1 className={slugstyles.heading}>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        <div className="commentbox" />
+      </div>
+      <Footer />
+    </>
   );
 };
 

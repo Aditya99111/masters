@@ -69,6 +69,6 @@ section {
 
 .btn:hover {
   background: var(--main-color);
-  color: #fff;
-  letter-spacing: 0.1rem;
+  color:#fff;
+  letter-spacing: .1rem;
 }
