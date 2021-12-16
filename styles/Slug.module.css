@@ -9,6 +9,9 @@
     color: white;
 
 }
+.commentcontainerpart {
+    background-color: rgb(177, 177, 177);
+}
 
 .loadingcontainer{
     align-items: center;

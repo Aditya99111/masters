@@ -1,4 +1,5 @@
 import React from 'react'
+import aboutimg from "../../../public/about-img.svg"
 import aboutstyles from "../../../styles/About.module.css"
 const About = () => {
     return (
@@ -6,7 +7,7 @@ const About = () => {
         <section className={aboutstyles.about} id="about">
 
             <div className={aboutstyles.image}>
-                <img src="image/about-img.svg" alt="" />
+                <img src={aboutimg} alt="" />
             </div>
 
             <div className={aboutstyles.content}>

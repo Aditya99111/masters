@@ -49,7 +49,8 @@ const Post: React.FC<{ post: Post }> = (props) => {
       <div className={slugstyles.blogbody}>
         <h1 className={slugstyles.heading}>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-        <div className="commentbox" />
+        <div className={slugstyles.commentcontainerpart}>
+        <div className="commentbox" /></div>
       </div>
       <Footer />
     </>

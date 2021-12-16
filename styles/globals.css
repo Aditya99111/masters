@@ -72,3 +72,6 @@ section {
   color:#fff;
   letter-spacing: .1rem;
 }
+.comment-box>.header .left h2{
+  color: #fff;
+}

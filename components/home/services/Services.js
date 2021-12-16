@@ -1,5 +1,8 @@
 import React from 'react'
 import servicesstyles from "../../../styles/Services.module.css"
+import icon1 from "../../../public/icon-2.svg"
+import icon2 from "../../../public/icon-3.svg"
+import icon3 from "../../../public/icon-6.svg"
 const Services = () => {
     return (
 
@@ -14,7 +17,7 @@ const Services = () => {
             <div className={servicesstyles.box_container}>
 
                 <div className={servicesstyles.box}>
-                    <img src="image/icon-1.svg" alt="" />
+                    <img src={icon1} alt="" />
                     <h3>Read online for free.</h3>
                     <p>Episodes are available Monthly On mobile and PC. Post-Apocalyptic TTRPG Coming SOON.
 
@@ -22,7 +25,7 @@ const Services = () => {
                 </div>
 
                 <div className={servicesstyles.box}>
-                    <img src="image/icon-2.svg" alt="" />
+                    <img src={icon2} alt="" />
                     <h3>Anime Fan Fiction.</h3>
                     <p>My Hero Academia, Yu-Gi-Oh, Fire Force and more!
                         Post-Apocalyptic TTRPG Coming SOON
@@ -30,7 +33,7 @@ const Services = () => {
                 </div>
 
                 <div className={servicesstyles.box}>
-                    <img src="image/icon-3.svg" alt="" />
+                    <img src={icon3} alt="" />
                     <h3>supporters get early content.</h3>
                     <p> Support Directly online or via Patreon. Support Development of Upcoming Projects
 
