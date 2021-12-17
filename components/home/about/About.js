@@ -1,5 +1,6 @@
 import React from 'react'
 import aboutimg from "./about-img.svg"
+import Image from "next/image"
 import aboutstyles from "../../../styles/About.module.css"
 const About = () => {
     return (
