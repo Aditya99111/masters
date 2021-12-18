@@ -1,5 +1,6 @@
 import React from 'react'
 import contactstyles from "../../../styles/Contact.module.css"
+import Link from "next/link"
 const Contact = () => {
 
    

@@ -13,10 +13,18 @@ const Header = () => {
         <a href="#home" className={headerstyles.active}>
           home
         </a>
-        <a href="#services">services</a>
-        <a href="#about">about</a>
-        <a href="#contact">contact</a>
-        <a href="#blogs">blogs</a>
+        <Link href="/#services">
+          <a>services</a>
+        </Link>
+        <Link href="/#about">
+          <a>about</a>
+        </Link>
+        <Link href="/#contact">
+          <a>contact</a>
+        </Link>
+        <Link href="/stories">
+          <a>Stories</a>
+        </Link>
       </nav>
 
       <div className={headerstyles.icons}>
