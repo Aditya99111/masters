@@ -2,10 +2,16 @@ import React from "react";
 import Header from "../components/home/header/Header";
 import Footer from "../components/home/footer/Footer";
 import Blog from "../components/blogs/Blog";
+import Head from "next/head";
+
 const stories = (props) => {
   return (
     <div>
       <>
+        <Head>
+          <title>All Stories</title>
+          <meta property="og:title" content="All Stories" key="stories" />
+        </Head>
         <Header />
         <Blog posts={props.posts} />
         <Footer />

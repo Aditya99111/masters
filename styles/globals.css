@@ -39,39 +39,11 @@ html::-webkit-scrollbar-thumb {
 body {
   overflow-x: hidden;
   background: var(--black);
+  opacity: 1;
 }
-
+a{
+  color: #000;
+}
 section {
-  padding: 2rem 9%;
-}
-
-.heading {
-  font-size: 4rem;
-  text-align: center;
-  padding-bottom: 2rem;
-  color: #fff;
-}
-
-.heading span {
-  color: var(--main-color);
-}
-
-.btn {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 0.8rem 3rem;
-  font-size: 1.7rem;
-  background: #fff;
-  font-weight: 500;
-  color: var(--black);
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: var(--main-color);
-  color:#fff;
-  letter-spacing: .1rem;
-}
-.comment-box>.header .left h2{
-  color: #fff;
+  padding: 8rem 9%;
 }

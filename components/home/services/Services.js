@@ -10,9 +10,9 @@ const Services = () => {
         <section className={servicesstyles.services} id="services" data-aos="zoom-out-left">
 
             <div className={servicesstyles.heading}>
+                <h1>Provisions</h1>
                 <span>Gather round the Hearth
                 </span>
-                <h1>Provisions</h1>
             </div>
 
             <div className={servicesstyles.box_container}>

@@ -14,13 +14,13 @@ const Header = () => {
           home
         </a>
         <Link href="/#services">
-          <a>services</a>
+          <a>Services</a>
         </Link>
         <Link href="/#about">
-          <a>about</a>
+          <a>About</a>
         </Link>
         <Link href="/#contact">
-          <a>contact</a>
+          <a>Contact</a>
         </Link>
         <Link href="/stories">
           <a>Stories</a>

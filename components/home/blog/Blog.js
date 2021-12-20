@@ -6,8 +6,8 @@ const Blog = ({ posts }) => {
   return (
     <section className={blogstyle.blogs} id="blogs">
       <h1 className={blogstyle.heading}>
-        {" "}
-        our <span>blogs</span>{" "}
+        
+        our <span>blogs</span>
       </h1>
 
       <div className={blogstyle.box_container}>

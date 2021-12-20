@@ -1,53 +1,64 @@
-.contact .row{
-    display: flex;
-    flex-wrap: wrap;
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
 }
+.contact{
 
-.contact .row .map{
-    flex:1 1 42rem;
-    width: 100%;
 }
-.btn{
+.contact .row .map {
+  flex: 1 1 42rem;
+  width: 100%;
+}
+.btn {
   margin-top: 1rem;
   display: inline-block;
-  padding:.8rem 3rem;
+  padding: 0.8rem 3rem;
   font-size: 1.7rem;
-  background:#fff;
+  background: #fff;
   font-weight: 500;
-  color:var(--black);
+  color: var(--black);
   cursor: pointer;
 }
-
-.btn:hover{
+.heading {
+  font-size: 5rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  color: #fff;
+}
+.heading span {
+  color: var(--main-color);
+  font-size: 4.5rem;
+}
+.btn:hover {
   background: var(--main-color);
-  color:#fff;
-  letter-spacing: .1rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
 }
 
-.contact .row form{
-    flex:1 1 42rem;
-    padding: 2rem;
-    text-align: center;
-    background:#222;
+.contact .row form {
+  flex: 1 1 42rem;
+  padding: 2rem;
+  text-align: center;
+  background: #222;
 }
 
-.contact .row form h3{
-    font-size: 3rem;
-    padding-bottom: 1rem;
-    color:var(--main-color);
+.contact .row form h3 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: var(--main-color);
 }
 
-.contact .row form .box{
-    width:100%;
-    padding:1rem 1.2rem;
-    background:var(--black);
-    color:#fff;
-    font-size: 1.6rem;
-    text-transform: none;
-    margin: .7rem 0;
+.contact .row form .box {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: var(--black);
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: none;
+  margin: 0.7rem 0;
 }
 
-.contact .row form textarea{
-    height:15rem;
-    resize: none;
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
 }

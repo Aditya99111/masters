@@ -44,6 +44,18 @@
     color:rgb(0, 0, 0) ;
     cursor: pointer;
   }
+
+  .heading {
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #fff;
+  }
+  
+  .heading span {
+    color: var(--main-color);
+  }
+  
   
   .btn:hover{
     background: var(--main-color);

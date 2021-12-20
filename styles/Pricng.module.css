@@ -9,6 +9,14 @@
   flex-wrap: wrap;
   padding-top: 2rem;
 }
+.wrapperabcd {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
 
 .item {
   width: 300px;
@@ -77,7 +85,14 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+.headinga{
+  font-size: 2.1rem;
+  padding: 3rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  color: #fff;
 
+}
 .wrapperabc .item.item_1 .btn {
   background: #69b0bb;
 }
@@ -135,4 +150,11 @@
 }
 .img>img:hover{
   border: 1px solid rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width: 660px) {
+  .wrapperabcd{
+    display: none;
+  }
 }

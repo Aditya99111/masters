@@ -13,15 +13,19 @@ const BLOG_URL = "https://demo.ghost.io";
 const CONTENT_API_KEY = "22444f78447824223cefc48062";
 
 export default function Home(props) {
-  
+
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Guild masters den</title>
+        <meta property="og:title" content="Guild masters den" key="title" />
+      </Head>
       <Header />
       <Hero />
       <Services />
       <About />
       <Contact />
-      <Blog posts={props.posts}/>
+      <Blog posts={props.posts} />
       <Footer />
     </div>
   );
