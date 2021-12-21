@@ -11,7 +11,6 @@ const Hero = () => {
                     <p>Come; sit by the fire and listen to a tale I&apos;ve spun for you, traveler.</p>
                     <a className={herostyles.btn}> <Link href="/stories">get started</Link></a>
                 </div>
-
             </div>
         </section>
 

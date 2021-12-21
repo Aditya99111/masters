@@ -5,12 +5,10 @@ import { useEffect } from "react";
 import slugstyles from "../../styles/Slug.module.css";
 import Header from "../../components/home/header/Header";
 import Footer from "../../components/home/footer/Footer";
+import Head from "next/head";
 
-const BLOG_URL = "https://demo.ghost.io";
-const CONTENT_API_KEY = "22444f78447824223cefc48062";
-
+const {BLOG_URL,CONTENT_API_KEY} = process.env;
 async function getPost(slug: string) {
-  // curl "https://demo.ghost.io/ghost/api/v3/content/posts/?key=22444f78447824223cefc48062"
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${CONTENT_API_KEY}`
   ).then((res) => res.json());
@@ -37,6 +35,8 @@ const Post: React.FC<{ post: Post }> = (props) => {
   if (router.isFallback) {
     return (
       <div className={slugstyles.loadercontainermain}>
+
+
       <div className={slugstyles.loader}>
         <div>
           <ul>
@@ -79,6 +79,10 @@ const Post: React.FC<{ post: Post }> = (props) => {
 
   return (
     <>
+    <Head>
+          <title>{post.title}</title>
+          <meta property="og:title" content={post.title} key={post.title} />
+        </Head>
       <Header />
       <div className={slugstyles.blogbody}>
         <h1 className={slugstyles.heading}>{post.title}</h1>

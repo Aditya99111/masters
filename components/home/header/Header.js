@@ -1,8 +1,11 @@
 import React from "react";
 import headerstyles from "../../../styles/Header.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
+
   return (
     <header className={headerstyles.header}>
       <Link href="/">
@@ -10,20 +13,35 @@ const Header = () => {
       </Link>
 
       <nav className={headerstyles.navbar}>
-        <a href="#home" className={headerstyles.active}>
-          home
-        </a>
+        <Link href="/">
+          <a className={router.asPath == "/" ? headerstyles.active : ""}>
+            home
+          </a>
+        </Link>
+
         <Link href="/#services">
-          <a>Services</a>
+          <a
+            className={router.asPath == "/#services" ? headerstyles.active : ""}
+          >
+            Services
+          </a>
         </Link>
         <Link href="/#about">
-          <a>About</a>
+          <a className={router.asPath == "/#about" ? headerstyles.active : ""}>
+            About
+          </a>
         </Link>
         <Link href="/#contact">
-          <a>Contact</a>
+          <a
+            className={router.asPath == "/#contact" ? headerstyles.active : ""}
+          >
+            Contact
+          </a>
         </Link>
         <Link href="/stories">
-          <a>Stories</a>
+          <a className={router.asPath == "/stories" ? headerstyles.active : ""}>
+            Stories
+          </a>
         </Link>
       </nav>
 
