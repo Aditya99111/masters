@@ -27,9 +27,9 @@ const Services = () => {
 
                 <div className={servicesstyles.box}>
                     <Image src={icon2} alt="" />
-                    <h3>Anime Fan Fiction.</h3>
-                    <p>My Hero Academia, Yu-Gi-Oh, Fire Force and more!
-                        Post-Apocalyptic TTRPG Coming SOON
+                    <h3>Creative Works.</h3>
+                    <p>My Hero Academia Fanfiction, Original Stories and more! Post-Apocalyptic TTRPG Coming SOON
+
                     </p>
                 </div>
 

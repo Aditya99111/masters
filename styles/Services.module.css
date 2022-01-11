@@ -37,3 +37,16 @@
   line-height: 2;
   font-size: 1.7rem;
 }
+
+
+
+@media screen and (max-width: 450px) {
+  
+  .services .heading{
+    font-size: 4rem;
+  }
+ 
+  .services .box_container .box {
+    margin-left: -1.5rem;
+  }
+}

@@ -9,17 +9,21 @@ import Blog from "../components/home/blog/Blog";
 import Header from "../components/home/header/Header";
 import Footer from "../components/home/footer/Footer";
 
-const BLOG_URL = "https://demo.ghost.io";
-const CONTENT_API_KEY = "22444f78447824223cefc48062";
+const {BLOG_URL,CONTENT_API_KEY} = process.env;
 
 export default function Home(props) {
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Guild masters den</title>
-        <meta property="og:title" content="Guild masters den" key="title" />
-      </Head>
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon2.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon2.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+          <meta name="theme-color" content="#ffffff" />
+          <title>Guild masters den</title>
+        </Head>
       <Header />
       <Hero />
       <Services />
@@ -32,7 +36,6 @@ export default function Home(props) {
 }
 
 async function getPosts() {
-  // curl "https://demo.ghost.io/ghost/api/v3/content/posts/?key=22444f78447824223cefc48062"
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,id,feature_image, html`
   ).then((res) => res.json());

@@ -27,6 +27,7 @@
 .blogspage .box_container .box .content{
     padding:2rem;
     background: #222;
+    min-height: 380px;
 }
 
 .blogspage .box_container .box .content h3{

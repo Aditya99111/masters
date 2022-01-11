@@ -26,7 +26,13 @@ const Post: React.FC<{ post: Post }> = (props) => {
   const { post } = props;
   const router = useRouter();
   useEffect(() => {
-    const removeCommentBox = commentBox("5714556336734208-proj");
+    const removeCommentBox = commentBox("5642397262282752-proj",{
+      backgroundColor: "#000",
+      textColor: "#fff"
+
+    }
+    );
+
     return () => {
       removeCommentBox();
     };
@@ -85,6 +91,11 @@ const Post: React.FC<{ post: Post }> = (props) => {
         </Head>
       <Header />
       <div className={slugstyles.blogbody}>
+        <div className={slugstyles.backlink}>
+
+        <Link href="/stories">⬅</Link>
+
+        </div>
         <h1 className={slugstyles.heading}>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
         <div className={slugstyles.commentcontainerpart}>

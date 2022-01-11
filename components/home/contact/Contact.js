@@ -16,7 +16,7 @@ const Contact = () => {
   return (
     <section className={contactstyles.contact} id="contact">
       <h1 className={contactstyles.heading}>
-        contact <span>us</span>{" "}
+        contact <span>us</span>
       </h1>
 
       <div className={contactstyles.row}>
